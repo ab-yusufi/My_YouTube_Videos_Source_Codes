@@ -1,0 +1,90 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center The Spans */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  font-family: sans-serif;
+}
+
+/* Center Text in Span */
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 10rem;
+  padding: 10px;
+  margin: 0 5px;
+  text-shadow: 2px 2px 20px #0f0;
+  animation: animate 1s linear infinite, colorChange 0.5s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+/* Animation */
+@keyframes animate {
+  0% {
+    transform: scaleY(1);
+  }
+  60% {
+    transform: scaleY(0.6);
+  }
+  70% {
+    transform: scaleY(0.9);
+  }
+  80% {
+    transform: scaleY(0.7);
+  }
+  90% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.9);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Responsive */
+/* Less Than 600px */
+@media (max-width: 600px) {
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+/* Greater Than 600px */
+@media (min-width: 600px) {
+  span {
+    font-size: 5rem;
+  }
+}
+
+/* Greater Than 768px */
+@media (min-width: 768px) {
+  span {
+    font-size: 6.5rem;
+  }
+}
+
+/* Greater Than 992px */
+@media (min-width: 992px) {
+  span {
+    font-size: 10rem;
+  }
+}

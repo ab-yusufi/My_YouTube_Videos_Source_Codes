@@ -1,0 +1,103 @@
+:root {
+  --color: #2827CC;
+}
+
+/* Remove ALl Margins and Paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center The loader */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+/* Loader CSS START */
+.loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  /* border: 1px solid #000; */
+}
+
+.loader span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  background: var(--color);
+  transform-origin: top;
+  animation: loadingAnim 2s linear infinite;
+  animation-delay: calc(.25s * var(--i));
+  box-shadow: 0 0 10px var(--color),
+              0 0 20px var(--color),
+              0 0 40px var(--color);
+}
+
+.loader span:nth-child(1) {
+  left: 0;
+  height: 50%;
+}
+
+.loader span:nth-child(2) {
+  left: 20%;
+  height: 70%;
+}
+
+.loader span:nth-child(3) {
+  left: 40%;
+  height: 100%;
+}
+
+.loader span:nth-child(4) {
+  left: 60%;
+  height: 75%;
+}
+
+.loader span:nth-child(5) {
+  left: 80%;
+  height: 50%;
+}
+
+/* Loading Text */
+h2 {
+  position: absolute;
+  bottom: -50px;
+  text-align: center;
+  color: var(--color);
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  animation: textAnim 10s linear infinite;
+  text-shadow: 0 0 10px var(--color),
+               0 0 20px var(--color);
+}
+
+/* Animations */
+@keyframes loadingAnim {
+  0%, 100% {
+    transform: scale(1) translateY(-50%);
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    transform: scale(0) translateY(-50%);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes textAnim {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}

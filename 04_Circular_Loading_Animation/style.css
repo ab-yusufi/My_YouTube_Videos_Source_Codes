@@ -1,0 +1,68 @@
+/* Googele Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Remove All Margins and Paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center The Loader */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000; //Dark Background for Glowing Effect
+}
+
+/* Loader CSS START */
+
+.loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* border: 1px solid #fff; */
+}
+
+.loader span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  left: 11px;
+  top: 11px;
+  transform-origin: 89px 89px; /* width, height / 2*/
+  transform: rotate(calc(36deg * var(--i)));
+  animation: spin 2s linear infinite;
+  animation-delay: calc(.2s * var(--i));
+  box-shadow: 0 0 10px #fff,
+              0 0 20px #fff,
+              0 0 40px #fff,
+              0 0 80px #fff;
+}
+
+/* Loading Text */
+h1 {
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  letter-spacing: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animations */
+@keyframes spin {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

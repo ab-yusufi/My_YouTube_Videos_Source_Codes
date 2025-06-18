@@ -1,0 +1,185 @@
+/* Saving All Colors in CSS Variables */
+:root {
+  --whatsapp-color: #25d366;
+  --whatsapp-dark-color: #075e54;
+  --facebook-color: #3b5998;
+  --linkedin-color: #0e76a8;
+  --twitter-color: #00acee;
+  --instagram-color: #fd1d1d;
+}
+
+/* Remove All Margins and Paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center The Icons */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000; //Dark Background for Glow Effect
+}
+
+/* Icon CSS */
+
+.icon {
+  margin: 0 20px;
+}
+
+.icon span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  border: 1px solid var(--facebook-color);
+  font-size: 3rem;
+  cursor: pointer;
+  transition: .7s;
+}
+
+/* Top and Bottom Borders */
+.icon span::before,
+.icon span::after
+ {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: scaleY(0.1);
+  background: var(--facebook-color);
+  transition: .7s;
+  transform-origin: bottom;
+  z-index: -1;
+}
+
+.icon span::after {
+  transform-origin: top;
+}
+
+/* Hover Effect */
+
+.icon span:hover {
+  background: var(--facebook-color);
+  box-shadow: 0 0 10px var(--facebook-color),
+              0 0 20px var(--facebook-color),
+              0 0 40px var(--facebook-color),
+              0 0 80px var(--facebook-color),
+              0 0 120px var(--facebook-color),
+              0 0 240px var(--facebook-color);
+}
+
+.icon span:hover::before,
+.icon span:hover::after {
+  transform: scaleY(1);
+}
+
+/* Whatsapp */
+.icon span.whatsapp {
+  border: 1px solid var(--whatsapp-color);
+
+}
+
+.icon span.whatsapp:hover {
+  background: var(--whatsapp-color);
+  box-shadow: 0 0 10px var(--whatsapp-color),
+              0 0 20px var(--whatsapp-color),
+              0 0 40px var(--whatsapp-color),
+              0 0 80px var(--whatsapp-color),
+              0 0 120px var(--whatsapp-color),
+              0 0 240px var(--whatsapp-color);
+}
+
+.icon span.whatsapp::before,
+.icon span.whatsapp::after {
+  background: var(--whatsapp-color);
+}
+
+.icon span.whatsapp:hover::before,
+.icon span.whatsapp:hover::after {
+  background: var(--whatsapp-color);
+}
+
+/* Twiiter */
+.icon span.twitter {
+  border: 1px solid var(--twitter-color);
+
+}
+
+.icon span.twitter:hover {
+  background: var(--twitter-color);
+  box-shadow: 0 0 10px var(--twitter-color),
+              0 0 20px var(--twitter-color),
+              0 0 40px var(--twitter-color),
+              0 0 80px var(--twitter-color),
+              0 0 120px var(--twitter-color),
+              0 0 240px var(--twitter-color);
+}
+
+.icon span.twitter::before,
+.icon span.twitter::after {
+  background: var(--twitter-color);
+}
+
+.icon span.twitter:hover::before,
+.icon span.twitter:hover::after {
+  background: var(--twitter-color);
+}
+
+/* Instagram */
+.icon span.instagram {
+  border: 1px solid var(--instagram-color);
+
+}
+
+.icon span.instagram:hover {
+  background: var(--instagram-color);
+  box-shadow: 0 0 10px var(--instagram-color),
+              0 0 20px var(--instagram-color),
+              0 0 40px var(--instagram-color),
+              0 0 80px var(--instagram-color),
+              0 0 120px var(--instagram-color),
+              0 0 240px var(--instagram-color);
+}
+
+.icon span.instagram::before,
+.icon span.instagram::after {
+  background: var(--instagram-color);
+}
+
+.icon span.instagram:hover::before,
+.icon span.instagram:hover::after {
+  background: var(--instagram-color);
+}
+
+/* Linked In */
+.icon span.linkedin {
+  border: 1px solid var(--linkedin-color);
+
+}
+
+.icon span.linkedin:hover {
+  background: var(--linkedin-color);
+  box-shadow: 0 0 10px var(--linkedin-color),
+              0 0 20px var(--linkedin-color),
+              0 0 40px var(--linkedin-color),
+              0 0 80px var(--linkedin-color),
+              0 0 120px var(--linkedin-color),
+              0 0 240px var(--linkedin-color);
+}
+
+.icon span.linkedin::before,
+.icon span.linkedin::after {
+  background: var(--linkedin-color);
+}
+
+.icon span.linkedin:hover::before,
+.icon span.linkedin:hover::after {
+  background: var(--linkedin-color);
+}
